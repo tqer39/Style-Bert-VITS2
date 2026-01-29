@@ -45,6 +45,13 @@ torch = [
     "accelerate",
     "torch>=2.1",
 ]
+server = [
+    "fastapi",
+    "uvicorn",
+    "scipy",
+    "GPUtil",
+    "psutil",
+]
 
 [project.urls]
 Documentation = "https://github.com/litagin02/Style-Bert-VITS2#readme"
