@@ -27,7 +27,7 @@ pypinyin
 pyworld-prebuilt
 stable_ts
 tensorboard
-torch<2.4
-torchaudio<2.4
-transformers
+# torch と torchaudio は CUDA 版を使うため、requirements.txt では管理しない
+# インストール: uv pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu118
+transformers==4.44.2
 umap-learn
