@@ -13,6 +13,9 @@ pip install uv
 echo Installing PyTorch with CUDA 11.8...
 uv pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu118
 
+echo Installing GPUtil...
+uv pip install gputil
+
 echo Installing Style-Bert-VITS2 with server and torch extras...
 uv pip install -e ".[server,torch]"
 
