@@ -37,7 +37,10 @@ dependencies = [
     "pypinyin",
     "pyworld-prebuilt",
     "safetensors",
-    "transformers",
+    # transformers 5.0 では BertJapaneseTokenizer の代わりに TokenizersBackend が強制使用され、
+    # deberta-v2-large-japanese-char-wwm の tokenizer.json (handle_chinese_chars=False) を用いると
+    # 日本語入力が全て [UNK] になり bert_feature.py の word2ph アサーションが失敗する
+    "transformers<5",
 ]
 
 [project.optional-dependencies]
